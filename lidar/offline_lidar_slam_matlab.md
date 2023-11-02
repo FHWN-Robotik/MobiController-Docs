@@ -13,7 +13,7 @@ parent: LiDAR
 ## Umsetzung
 
 Um mittels Matlab einen offline LiDAR Slam zu implementieren, wird ein ROS-Bag eines LiDAR Scans benötigt.
-Ein Beispiel ROS-Bag kann [hier](https://github.com/Flo2410/MobiController-Docs/blob/main/assets/code/ros/rosbag2) heruntergeladen werden.
+Ein Beispiel ROS-Bag kann [hier](https://github.com/Flo2410/MobiController-Docs/blob/main/assets/ros/rosbag2) heruntergeladen werden.
 
 Anschließend kann das [Matlab Script](https://github.com/Flo2410/MobiController-Docs/blob/main/assets/code/matlab/lidar_offline.m) heruntergeladen werden.
 Dieses sollte im gleichen Ordner liegen, wie das ROS-Bag. Alternativ kann auch der Dateipfad im Script angepasst werden.
