@@ -181,7 +181,7 @@ Mit jstest-gtk kann die Funktion des Gamepads in Linux getestet werden.
 
 > Quelle: [github.com/joshnewans/joy_tester](https://github.com/joshnewans/joy_tester)
 
-Joy Tester ermöglicht es den `/joy` Topic grafisch anzuzeigen. So lässt sich die Funktion des Gamepads überprüfen.
+Joy Tester ermöglicht es den `/joy` Topic grafisch anzuzeigen. Damit lässt sich die Funktion des Gamepads in ROS überprüfen.
 
 1. In den `src` Ordner eines ROS2 Workspaces wechseln. z.B. mit:
 
