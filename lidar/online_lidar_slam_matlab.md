@@ -5,6 +5,17 @@ parent: LiDAR
 ---
 
 # Online LiDAR SLAM (MATLAB)
+{: .no_toc }
+
+## Inhalt
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
+
+## Einleitung
 
 Um mittels Matlab einen online LiDAR Slam zu implementieren werden zwei ROS Nodes benötigt. Eine veröffentlicht die LiDAR Daten, die andere führt den Slam-Algorithmus aus.
 

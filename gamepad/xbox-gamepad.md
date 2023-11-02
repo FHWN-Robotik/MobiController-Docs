@@ -5,6 +5,17 @@ parent: Gamepad
 ---
 
 # Xbox Gamepad
+{: .no_toc }
+
+## Inhalt
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
+
+## Einleitung
 
 In diesem Dokument wird erklärt wie ein Xbox Gamepad in ROS2 verwendet werden kann. Dieser published den Topic `/joy` mit dem Type `sensor_msgs/Joy`.
 
@@ -166,7 +177,7 @@ Mit jstest-gtk kann die Funktion des Gamepads in Linux getestet werden.
 
 5. Tasten drücken und Sticks bewegen.
 
-## ROS2 Joy Tester
+### ROS2 Joy Tester
 
 > Quelle: [github.com/joshnewans/joy_tester](https://github.com/joshnewans/joy_tester)
 

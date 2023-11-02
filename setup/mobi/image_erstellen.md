@@ -1,15 +1,25 @@
 ---
 layout: default
 title: Image Erstellen
-parent: Setup
+parent: Mobi
+grand_parent: Setup
 ---
 
 # Erstellen des Raspberry Prebuilt Images
+{: .no_toc }
 
 {: .warning }
-Dieser Abschnitt ist nicht für Studenten gedacht!
+Dieser Abschnitt ist **nicht** für Studenten gedacht!
 
-## Instalation Ubuntu Mate
+## Inhalt
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
+
+## Installation Ubuntu Mate
 
 1. Download von Ubuntu Mate 22.04 [hier](https://ubuntu-mate.org/download/)
 

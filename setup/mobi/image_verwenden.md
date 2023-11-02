@@ -1,10 +1,20 @@
 ---
 layout: default
 title: Verwenden des Prebuild Images
-parent: Setup
+parent: Mobi
+grand_parent: Setup
 ---
 
 # Verwenden des Prebuild Images
+{: .no_toc }
+
+## Inhalt
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
 
 ## Installation
 
@@ -68,10 +78,11 @@ parent: Setup
 
 2. Mit SSH verbinden:
 
+   {: .note}
+   Folgender Befehl muss lokal ausgeführt werden.
+
    - `-X`: X-Forwarding
    - `-C`: Kompression
-
-   > **_ACHTUNG:_** Lokal ausführen
 
    ```bash
    ssh -XC mobi@10.94.160.xxx
