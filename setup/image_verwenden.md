@@ -8,7 +8,7 @@ parent: Setup
 
 ## Installation
 
-1. Image herunterladen.
+1. Image [herunterladen](https://fhwiener.sharepoint.com/:u:/s/BACMobi_cloud/EUx3iKcWVMNDpjr2bIcfgwEBm7VD3D7REHhsJGJzlkuGvg?e=ff3PBE).
 2. Flashen des Images auf eine SD-Karte, z. B. mit [balenaEtcher](https://www.balena.io/etcher)
 3. SD-Karte in Raspberry stecken und Raspberry einschalten.
 4. Hostname setzen:
