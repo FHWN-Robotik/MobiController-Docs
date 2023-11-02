@@ -6,7 +6,8 @@ parent: Setup
 
 # Erstellen des Raspberry Prebuilt Images
 
-> ⚠️ **_HINWEIS:_** Dieser Abschnitt ist nicht für Studenten gedacht!
+{: .warning }
+Dieser Abschnitt ist nicht für Studenten gedacht!
 
 ## Instalation Ubuntu Mate
 

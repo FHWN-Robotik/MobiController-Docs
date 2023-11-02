@@ -101,7 +101,8 @@ Ebenfalls muss der Benutzer der passenden Gruppe zugewiesen werden.
 
 ## Joy Node starten
 
-> ⚠️ HINWEIS: Vor dem Verwenden des Gamepads in ROS2 ist es empfehlenswert zu überprüfen ob dieses von Linux erkannt wird. Siehe Abschnitt "[Testen des Gamepads](#jstest-gtk)".
+{: .note }
+Vor dem Verwenden des Gamepads in ROS2 ist es empfehlenswert zu überprüfen ob dieses von Linux erkannt wird. Siehe Abschnitt "[Testen des Gamepads](#jstest-gtk)".
 
 Um die Eingaben auf dem Gamepad in einem ROS Topic zu publishen kann das [joy](https://index.ros.org/p/joy/#humble) Package verwendet werden.
 

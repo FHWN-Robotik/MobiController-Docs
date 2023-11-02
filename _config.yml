@@ -6,3 +6,19 @@ url: https://flo2410.github.io/MobiController-Docs
 
 # aux_links:
 #   Template Repository: https://github.com/just-the-docs/just-the-docs-template
+
+callouts:
+  highlight:
+    color: yellow
+  
+  note:
+    title: Hinweis
+    color: purple
+
+  important:
+    title: Wichtig
+    color: blue
+
+  warning:
+    title: Achtung
+    color: red

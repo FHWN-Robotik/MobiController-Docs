@@ -79,7 +79,8 @@ parent: Setup
 
 ## SSH mit Public Key Authentifikation (optional, empfohlen)
 
-> **_ACHTUNG:_** Alle folgenden Befehle lokal ausführen und xx immer mit dem passen Teil der IP des Mobis ersetzen.
+{: .note }
+Alle folgenden Befehle lokal ausführen und xx immer mit dem passen Teil der IP des Mobis ersetzen.
 
 1. Key Pair generieren
 
