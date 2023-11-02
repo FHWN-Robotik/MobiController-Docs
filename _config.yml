@@ -4,5 +4,5 @@ theme: just-the-docs
 
 url: https://flo2410.github.io/MobiController-Docs
 
-aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+# aux_links:
+#   Template Repository: https://github.com/just-the-docs/just-the-docs-template
