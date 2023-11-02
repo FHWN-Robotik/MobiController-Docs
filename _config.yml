@@ -7,6 +7,12 @@ url: https://flo2410.github.io/MobiController-Docs
 # aux_links:
 #   Template Repository: https://github.com/just-the-docs/just-the-docs-template
 
+color_scheme: dark
+
+# Back to top link
+back_to_top: true
+back_to_top_text: "Zurück zum Anfang"
+
 callouts:
   highlight:
     color: yellow
