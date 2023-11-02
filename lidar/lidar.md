@@ -5,4 +5,6 @@ nav_order: 3
 has_children: true
 ---
 
-This is the LiDAR page
+# LiDAR
+
+In diesem Bereich wird die Verwendung des LiDARs erläutert.

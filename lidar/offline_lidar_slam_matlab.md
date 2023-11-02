@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Offline LiDAR SLAM
+title: Offline LiDAR SLAM (MATLAB)
 parent: LiDAR
 ---
 
-# Offline LiDAR SLAM
+# Offline LiDAR SLAM (MATLAB)
 
 ## Voraussetzungen
 

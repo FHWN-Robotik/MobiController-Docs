@@ -5,4 +5,6 @@ nav_order: 4
 has_children: true
 ---
 
-This is the Gamepad page
+# Gamepad
+
+In diesem Bereich finden sich Informationen zur Verwendung eines Gamepads mit ROS auf dem Mobi.
