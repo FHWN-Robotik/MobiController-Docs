@@ -25,9 +25,9 @@ Hierzu siehe die [offizielle Dokumentation](https://www.docker.com/products/dock
 
 ## ROS2 Docker Container
 
-{: .note}
-Das in diesm Abschnitt verwendete Script funktioniert aktuell nur unter Linux und MacOS.
-Windows Nutzer können dennoch den Devcontainer verwenden. Siehe Abschnitt [VS Code Devcontainer](#vs-code-devcontainer)
+{: .warning}
+Das in diesem Abschnitt verwendete Script funktioniert aktuell nur unter Linux und MacOS.
+Windows Nutzer können dennoch den Dev-Container verwenden. Siehe Abschnitt [VS Code Dev-Container](#vs-code-devcontainer)
 
 Ein fertiges ROS2 Humble Dockerimage ist [hier](https://github.com/Flo2410/ros2-docker) zu finden.
 
@@ -51,4 +51,63 @@ Ein fertiges ROS2 Humble Dockerimage ist [hier](https://github.com/Flo2410/ros2-
 
     Dies lädt automatisch das Docker Image herunter und startet einen Container mit diesem.
 
-## VS Code Devcontainer
+## VS Code Dev-Container
+
+Der Dev-Container ermöglicht es mit VS Code in einer ROS Umgebung arbeiten zu können.
+Um diesen verwenden zu können müssen folgende Schritte ausgeführt werden:
+
+1. Installieren der [Dev-Container](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) VS Code Erweiterung.
+
+2. Erstellen der Dev-Container Konfigurationsdatei:
+
+    Hierfür muss im gewünschten ROS Workspace (z.B. `~/ros2_ws`) die Datei `.devcontainer/devcontainer.json` mit folgendem Inhalt erstellt werden.
+
+    {: .note}
+    Mit der Umgebungsvariable `ROS_DOMAIN` kann die vom Roboter verwendete ROS Domain gesetzt werde.
+    Dies ermöglicht die Kommunikation zischen dem Dev-Container und dem Roboter.
+
+    ```jsonc
+      {
+        "image": "ghcr.io/flo2410/ros2-docker:latest",
+        "remoteUser": "ros",
+        "runArgs": [
+          "--volume=/tmp/.X11-unix:/tmp/.X11-unix",
+          "--security-opt=apparmor:unconfined",
+          "--security-opt=seccomp:unconfined",
+          "--ipc=host",
+          "--network=host",
+          "--name=ros2-docker",
+          "--hostname=ros2-docker",
+          "--ipc=host"
+        ],
+        "containerEnv": {
+          "DISPLAY": "${localEnv:DISPLAY}", // Needed for GUI try ":0" for windows
+          "WAYLAND_DISPLAY": "${localEnv:WAYLAND_DISPLAY}",
+          "XDG_RUNTIME_DIR": "${localEnv:XDG_RUNTIME_DIR}",
+          "PULSE_SERVER": "${localEnv:PULSE_SERVER}",
+          "LIBGL_ALWAYS_SOFTWARE": "1", // Needed for software rendering of opengl
+          "PYTHONWARNINGS": "ignore:setup.py install is deprecated::setuptools.command.install", // disabel deprecation warning
+          "ROS_DOMAIN": "0" // Set the ROS Domain used.
+        },
+        "customizations": {
+          "vscode": {
+            "extensions": [
+              "althack.ament-task-provider",
+              "betwo.b2-catkin-tools",
+              "DotJoshJohnson.xml",
+              "ms-azuretools.vscode-docker",
+              "ms-iot.vscode-ros",
+              "ms-python.python",
+              "ms-vscode.cpptools",
+              "redhat.vscode-yaml",
+              "smilerobotics.urdf",
+              "streetsidesoftware.code-spell-checker",
+              "twxs.cmake",
+              "yzhang.markdown-all-in-one",
+              "zachflower.uncrustify",
+              "ms-vscode.cmake-tools"
+            ]
+          }
+        }
+      }
+    ```
