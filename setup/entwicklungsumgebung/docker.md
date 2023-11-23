@@ -27,7 +27,7 @@ Hierzu siehe die [offizielle Dokumentation](https://www.docker.com/products/dock
 
 {: .warning}
 Das in diesem Abschnitt verwendete Script funktioniert aktuell nur unter Linux und MacOS.
-Windows Nutzer können dennoch den Dev-Container verwenden. Siehe Abschnitt [VS Code Dev-Container](#vs-code-devcontainer)
+Windows Nutzer können dennoch den Dev-Container verwenden. Siehe Abschnitt [VS Code Dev-Container](#vs-code-dev-container)
 
 Ein fertiges ROS2 Humble Dockerimage ist [hier](https://github.com/Flo2410/ros2-docker) zu finden.
 
@@ -87,7 +87,7 @@ Um diesen verwenden zu können müssen folgende Schritte ausgeführt werden:
           "PULSE_SERVER": "${localEnv:PULSE_SERVER}",
           "LIBGL_ALWAYS_SOFTWARE": "1", // Needed for software rendering of opengl
           "PYTHONWARNINGS": "ignore:setup.py install is deprecated::setuptools.command.install", // disabel deprecation warning
-          "ROS_DOMAIN": "0" // Set the ROS Domain used.
+          "ROS_DOMAIN": "0" // Set the ROS Domain used by the robot
         },
         "customizations": {
           "vscode": {
