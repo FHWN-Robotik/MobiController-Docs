@@ -23,34 +23,6 @@ Eine einfache Methode eine ROS2 Entwicklungsumgebung zu erstellen ist mithilfe e
 Um Docker verwenden zu können, muss der Docker-Agent installiert sein.
 Hierzu siehe die [offizielle Dokumentation](https://www.docker.com/products/docker-desktop) für Docker-Desktop.
 
-## ROS2 Docker Container
-
-{: .warning}
-Das in diesem Abschnitt verwendete Script funktioniert aktuell nur unter Linux und MacOS.
-Windows Nutzer können dennoch den Dev-Container verwenden. Siehe Abschnitt [VS Code Dev-Container](#vs-code-dev-container)
-
-Ein fertiges ROS2 Humble Dockerimage ist [hier](https://github.com/Flo2410/ros2-docker) zu finden.
-
-1. Herunterladen
-
-    ```bash
-    git clone https://github.com/Flo2410/ros2-docker.git
-    ```
-
-2. In das Verzeichnis wechseln
-
-    ```bash
-    cd ros2-docker
-    ```
-
-3. Das Script ausführen
-
-    ```bash
-    ./ros2-docker.sh
-    ```
-
-    Dies lädt automatisch das Docker Image herunter und startet einen Container mit diesem.
-
 ## VS Code Dev-Container
 
 Der Dev-Container ermöglicht es mit VS Code in einer ROS Umgebung arbeiten zu können.
@@ -111,3 +83,32 @@ Um diesen verwenden zu können müssen folgende Schritte ausgeführt werden:
         }
       }
     ```
+
+## ROS2 Docker Container Script
+
+{: .warning}
+Das in diesem Abschnitt verwendete Script funktioniert aktuell nur unter Linux und MacOS.
+Windows Nutzer können dennoch den Dev-Container verwenden. Siehe Abschnitt [VS Code Dev-Container](#vs-code-dev-container)
+
+Ein fertiges ROS2 Humble Dockerimage ist [hier](https://github.com/Flo2410/ros2-docker) zu finden.
+
+1. Herunterladen
+
+    ```bash
+    git clone https://github.com/Flo2410/ros2-docker.git
+    ```
+
+2. In das Verzeichnis wechseln
+
+    ```bash
+    cd ros2-docker
+    ```
+
+3. Das Script ausführen
+
+    ```bash
+    ./ros2-docker.sh
+    ```
+
+    Dies lädt automatisch das Docker Image herunter und startet einen Container mit diesem.
+
