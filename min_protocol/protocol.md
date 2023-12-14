@@ -15,6 +15,12 @@ parent: MIN Protokoll
 
 ---
 
+<style>
+table td:first-of-type {
+    width: 25%;
+}
+</style>
+
 ## Einleitung
 
 Das Kommunikations-Protokoll definiert die Kommunikation zwischen dem Raspberry und dem Hardware-Controller (folgend auch STM) des Mobis. Dabei ist dieses in zwei Gruppen geteilt. Die [Befehle (Commands)](#befehle-commands) stellen die Befehle dar welche vom Raspberry an den STM gesendet werden. Die [Antworten/Daten (Data)](#antwortendaten-data) hingegen, stellen die Antworten des STMs dar. Diese können entweder Daten (z.B. Sensordaten) oder Statuscodes sein.
