@@ -16,6 +16,10 @@ grand_parent: Setup
 
 ---
 
+{: .warning}
+Aktuell ist die Kommunikation zwischen dem Docker Container und dem Roboter nicht möglich.
+Der Grund hierfür ist die Netzwerkisolation von Docker Desktop.
+
 ## Einleitung
 
 Eine einfache Methode eine ROS2 Entwicklungsumgebung zu erstellen ist mithilfe eines Docker Containers.
