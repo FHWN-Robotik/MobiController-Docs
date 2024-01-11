@@ -13,7 +13,7 @@
 		}
 	},
 
-  "postStartCommand": "bundle exec jekyll serve"
+  // "postStartCommand": "bundle exec jekyll serve"
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
