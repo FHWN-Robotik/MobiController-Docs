@@ -167,7 +167,7 @@ Dieser Abschnitt ist **nicht** für Studenten gedacht!
 
 ## Netzwerk fix
 
-https://askubuntu.com/a/1010638
+> Quelle: <https://askubuntu.com/a/1010638>
 
 1. Datei `/etc/NetworkManager/dispatcher.d/90-fhwn-ping-router` erstellen
 2. Folgendes in die Datei eintragen:
@@ -208,72 +208,7 @@ https://askubuntu.com/a/1010638
 
 ## ROS 2 Installieren
 
-Die offizielle Anleitung ist [hier](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html) zu finden.
-
-1. Repository hinzufügen
-
-   ```bash
-   sudo apt update && sudo apt install curl -y
-   ```
-
-   ```bash
-   sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key 
-   -o /usr/share/keyrings/ros-archive-keyring.gpg
-   ```
-
-   ```bash
-   echo "deb [arch=$(dpkg --print-architecture) 
-   signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu 
-   $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | 
-   sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
-   ```
-
-   ```bash
-   sudo apt update
-   ```
-
-2. ROS Installieren
-
-   ```bash
-   sudo apt install ros-humble-desktop -y
-   ```
-
-3. Installieren von ROS Devtools
-
-   ```bash
-   sudo apt install ros-dev-tools -y
-   ```
-
-4. Suppress python setuptool deprecation warning. Mehr [hier](https://github.com/ament/ament_cmake/issues/382#issuecomment-1528083515) und [hier](https://robotics.stackexchange.com/questions/24230/setuptoolsdeprecationwarning-in-ros2-humble/24349#24349)
-
-   ```bash
-   echo "PYTHONWARNINGS=\"ignore:setup.py install is deprecated::setuptools.command.install\";
-   export PYTHONWARNINGS" >> ~/.bashrc
-   ```
-
-5. Sourcen des ROS Setup Files
-
-   ```bash
-   echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
-   ```
-
-   ```bash
-   source ~/.bashrc
-   ```
-
-6. ENV überprüfen
-
-   ```bash
-   printenv | grep -i ROS
-   ```
-
-   Die ENV Variablen sollten folgende Werte haben:
-
-   ```bash
-   ROS_VERSION=2
-   ROS_PYTHON_VERSION=3
-   ROS_DISTRO=humble
-   ```
+Die Installationsanleitung für ROS ist [hier]({{site.url}}/setup/ros.html) zu finden.
 
 ## Erstellen des Images der SD-Karte
 
