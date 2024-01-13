@@ -20,7 +20,10 @@ grand_parent: Setup
 
 Das Ziel ist die Installation von ROS2 auf ein Linux Betriebssystem mittels des *Windows-Subsystem für Linux* (WSL).
 
+<!-- TODO: Add img docs: https://www.xda-developers.com/how-back-up-restore-wsl/ -->
+
 ## WSL2 aktivieren
+  <!-- TODO: Change to more modern and easier variant: https://learn.microsoft.com/en-us/windows/wsl/install -->
 
  1. *Windows-Start* Taste klicken.
 
@@ -71,3 +74,13 @@ Ermöglicht einen besseren Workflow mit ROS2.
 ## Installation von ROS2 Humble
 
 Die Installationsanleitung für ROS ist [hier]({{site.url}}/setup/ros.html) zu finden.
+
+<!-- ## Netzwerk fix für Windows -->
+<!-- https://learn.microsoft.com/en-us/windows/wsl/networking#mirrored-mode-networking -->
+<!-- https://github.com/microsoft/WSL/issues/10769#issuecomment-1815884540 -->
+
+<!-- ```
+[wsl2]
+networkingMode=mirrored
+firewall=true
+``` -->
