@@ -23,10 +23,6 @@ callouts:
 
   note:
     title: Hinweis
-    color: purple
-
-  important:
-    title: Wichtig
     color: blue
 
   warning:
