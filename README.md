@@ -2,7 +2,7 @@
 
 Dies ist das Repository für die Dokumentation des Mobis.
 
-Die Dokumentation ist [hier](https://flo2410.github.io/MobiController-Docs/) verfügbar.
+Die Dokumentation ist [hier](https://fhwn-robotik.github.io/MobiController-Docs/) verfügbar.
 
 ## Entwickeln
 
