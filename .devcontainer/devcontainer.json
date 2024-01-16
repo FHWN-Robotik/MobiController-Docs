@@ -9,7 +9,8 @@
 			"extensions": [
 				"DavidAnson.vscode-markdownlint",
 				"valentjn.vscode-ltex",
-        "sissel.shopify-liquid"
+				"sissel.shopify-liquid",
+				"eamodio.gitlens"
 			]
 		}
 	},
