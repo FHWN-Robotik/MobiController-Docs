@@ -73,9 +73,11 @@ sudo apt update
 sudo apt install ros-dev-tools -y
 ```
 
-### Unterdrücken des Python setuptool deprecation warning
+### Unterdrücken des Python *setuptool deprecation warning*
 
-> Mehr [hier](https://github.com/ament/ament_cmake/issues/382#issuecomment-1528083515) und [hier](https://robotics.stackexchange.com/questions/24230/setuptoolsdeprecationwarning-in-ros2-humble/24349#24349)
+{: .source}
+<https://github.com/ament/ament_cmake/issues/382#issuecomment-1528083515>
+[https://robotics.stackexchange.com/questions/...](https://robotics.stackexchange.com/questions/24230/setuptoolsdeprecationwarning-in-ros2-humble/24349#24349)
 
 ```bash
 echo "PYTHONWARNINGS=\"ignore:setup.py install is deprecated::setuptools.command.install\";
