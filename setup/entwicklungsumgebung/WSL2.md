@@ -22,65 +22,111 @@ Das Ziel ist die Installation von ROS2 auf ein Linux Betriebssystem mittels des 
 
 <!-- TODO: Add img docs: https://www.xda-developers.com/how-back-up-restore-wsl/ -->
 
-## WSL2 aktivieren
-  <!-- TODO: Change to more modern and easier variant: https://learn.microsoft.com/en-us/windows/wsl/install -->
-
- 1. *Windows-Start* Taste klicken.
-
- 2. *Windows-Features aktivieren und deaktivieren* schreiben und ausführen.
-
- 3. Im Fenster *Windows-Subsystem für Linux* und *VM-Plattform* aktivieren.
-
- 4. *OK* klicken und das Fenster schließen.
-
-![alt text]({{site.url}}/assets/imgs/wsl2/img1.jpg)
-
-## Installation von Ubuntu 22.04
-
- 1. *Windows-Start Taste* klicken.
-
- 2. *Eingabeaufforderung* schreiben und ausführen.
-
- 3. ``wsl --set-default-version 2``
-
- 4. ``wsl --install -d Ubuntu-22.04`` eintippen.
-
- 5. *Enter-Taste* drücken.
-
- 6. Installation abwarten.
-
- 7. Username eingeben.
-
- 8. Password eingeben.
-
- 9. FERTIG!
-
-Mit ``wsl --list --verbose`` überprüfen, ob die Linux-Distribution auf WSL2 läuft.
-
 ## Installation von Windows Terminal (empfohlen)
 
-Ermöglicht einen besseren Workflow mit ROS2.
+{: .source}
+<https://learn.microsoft.com/de-at/windows/terminal/install>
 
- 1. *Windows Terminal* in *Microsoft Store* suchen und installieren.
+Das Windows Terminal ermöglicht einen besseren Workflow als mit den herkömmlichen *cmd* Fenster.
+Zur Installation müssen folgende Schritte ausgeführt werden.
 
- 2. *Windows Terminal* starten.
+1. Folgenden Link aufrufen <https://aka.ms/terminal>
 
- 3. Den Pfeil in der Tab-Leiste klicken.
+2. Auf der sich öffnenden Seite oder Pop-up auf `Installieren` klicken.
 
- 4. *Ubuntu 22.04 LTS* auswählen.
+3. Nach der Installation das Windows-Terminal öffnen und darin die *Einstellungen*.
 
-![alt text]({{site.url}}/assets/imgs/wsl2/img2.jpg)
+4. *Windows-Terminal* als Standardterminalanwendung  auswählen.
+
+![Settings Default Shell]({{site.url}}/assets/imgs/wsl2/settings-default-shell.png)
+
+## WSL2 und Ubuntu 22.04 Installieren
+
+{: .source}
+<https://learn.microsoft.com/en-us/windows/wsl/install>
+
+Um Ubuntu 22.04 auf dem *Windows Subsystem for Linux* (WSL) zu installieren müssen folgende Befehle ausgeführt werden.
+
+1. Ein *PowerShell* Fenster öffnen.
+
+2. Die WSL Version auf WSL2 fixieren.
+
+   ```powershell
+   wsl --set-default-version 2
+   ```
+
+3. WSL2 und Ubuntu 22.04 installieren.
+
+   ```powershell
+   wsl --install -d Ubuntu-22.04
+   ```
+
+4. Installation abwarten.
+
+5. Username eingeben.
+
+6. Password eingeben.
+
+7. Überprüfen, ob die Linux-Distribution auf WSL2 läuft.
+
+   ```powershell
+   wsl --list --verbose
+   ```
+
+   Die Ausgabe sollte wie folgt aussehen.
+
+   ```powershell
+   NAME                   STATE           VERSION
+   Ubuntu-22.04           Stopped         2
+   ```
 
 ## Installation von ROS2 Humble
 
 Die Installationsanleitung für ROS ist [hier]({{site.url}}/setup/ros.html) zu finden.
 
-<!-- ## Netzwerk fix für Windows -->
-<!-- https://learn.microsoft.com/en-us/windows/wsl/networking#mirrored-mode-networking -->
-<!-- https://github.com/microsoft/WSL/issues/10769#issuecomment-1815884540 -->
+## Netzwerk fix für Windows
 
-<!-- ```
-[wsl2]
-networkingMode=mirrored
-firewall=true
-``` -->
+{: .source}
+<https://learn.microsoft.com/en-us/windows/wsl/networking#mirrored-mode-networking>
+<https://github.com/microsoft/WSL/issues/10769#issuecomment-1815884540>
+
+{: .warning}
+Dies ist erst ab `Windows 11, Version 22H2, Build 22621.2359` möglich.
+Systeme mit einer älteren Windows Version können daher leider nicht mit anderen ROS Systemen kommunizieren.
+
+Um die ROS Kommunikation zwischen dem WSL und anderen Systemen zu ermöglichen muss das WSL noch entsprechend konfiguriert werden.
+
+### WSL2 Networking Mode anpassen
+
+Um die für ROS benötigte Multicast Kommunikation zu ermöglichen, muss die Netzwerkisolation des WSL deaktiviert werden.
+Damit eingehende Verbindung funktionieren, muss die *Hyper-V* Firewall entsprechend konfiguriert werden.
+Dazu müssen folgende Schritte ausgeführt werden.
+
+1. Die Datei `%UserProfile%\.wslconfig` erstellen (oder bearbeiten, falls bereits vorhanden) und mit einem Texteditor öffnen.
+
+   {: .note}
+   `%UserProfile%` ist der Home-Ordner des Benutzers. Dieser ist in der Regel `C:\Users\<UserName>`.
+
+2. Folgende Einstallungen in die `.wslconfig` Datei eintragen.
+
+   ```text
+   [wsl2]
+   networkingMode=mirrored
+   firewall=true
+   ```
+
+3. Anschließend muss noch die *Hyper-V* Firewall so konfiguriert werden, dass eingehende Verbindungen aus dem lokalen Netzwerk erlaubt werden.
+   1. Ein *PowerShell* Fenster als **Administrator** öffnen.
+
+   2. Folgenden Befehl ausführen.
+
+   ```powershell
+   New-NetFirewallHyperVRule `
+   -DisplayName 'Allow All Inbound Traffic to WSL in Private Network' `
+   -Name 'WSL Rule' `
+   -Profiles Private `
+   -Direction Inbound `
+   -Action Allow `
+   -VMCreatorId '{40E0AC32-46A5-438A-A0B2-2B479E8F2E90}' `
+   -Enabled True
+   ```
