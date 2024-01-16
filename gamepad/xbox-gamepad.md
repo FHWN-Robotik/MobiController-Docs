@@ -57,7 +57,8 @@ Ebenfalls muss der Benutzer der passenden Gruppe zugewiesen werden.
 
 ### Linux Kernel Module installieren
 
-> Quelle: [github.com/medusalix/xone](https://github.com/medusalix/xone)
+{: .source}
+<https://github.com/medusalix/xone>
 
 1. Xbox Gamepad und/oder Wireless Adapter abstecken.
 
@@ -84,7 +85,8 @@ Ebenfalls muss der Benutzer der passenden Gruppe zugewiesen werden.
 
 ### Gruppe für Benutzer konfigurieren
 
-> Quelle: [stackoverflow.com/a/13220622/15692454](https://stackoverflow.com/a/13220622/15692454)
+{: .source}
+<https://stackoverflow.com/a/13220622/15692454>
 
 1. Die Gruppe herausfinden:
 
@@ -179,7 +181,8 @@ Mit jstest-gtk kann die Funktion des Gamepads in Linux getestet werden.
 
 ### ROS2 Joy Tester
 
-> Quelle: [github.com/joshnewans/joy_tester](https://github.com/joshnewans/joy_tester)
+{: .source}
+<https://github.com/joshnewans/joy_tester>>
 
 Joy Tester ermöglicht es den `/joy` Topic grafisch anzuzeigen. Damit lässt sich die Funktion des Gamepads in ROS überprüfen.
 

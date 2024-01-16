@@ -167,7 +167,8 @@ Dieser Abschnitt ist **nicht** für Studenten gedacht!
 
 ## Netzwerk fix
 
-> Quelle: <https://askubuntu.com/a/1010638>
+{: .source}
+<https://askubuntu.com/a/1010638>
 
 1. Datei `/etc/NetworkManager/dispatcher.d/90-fhwn-ping-router` erstellen
 2. Folgendes in die Datei eintragen:

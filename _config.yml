@@ -17,6 +17,10 @@ callouts:
   highlight:
     color: yellow
   
+  source:
+    title: Quelle
+    color: grey-dk
+
   note:
     title: Hinweis
     color: purple
