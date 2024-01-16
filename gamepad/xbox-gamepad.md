@@ -37,6 +37,10 @@ Ebenfalls muss der Benutzer der passenden Gruppe zugewiesen werden.
 
 ### Voraussetzungen installieren
 
+{: .warning}
+Nach einem Kernel Update müssen die entsprechenden Header manuell nachinstalliert werden.
+Dies wird im Abschnitt [Linux Kernel Header updaten/neu installieren](#linux-header-updatenneu-installieren) erklärt.
+
 1. Zuerst müssen die "Prerequisites" installiert werden:
 
     ```bash
@@ -203,3 +207,64 @@ Joy Tester ermöglicht es den `/joy` Topic grafisch anzuzeigen. Damit lässt sic
     ```bash
     ros2 run joy_tester test_joy
     ```
+
+## Fehler Beheben
+
+Falls sich der Xbox Controller nicht mehr verbinden lässt können folgende Optionen helfen.
+
+### Linux Header updaten/neu installieren
+
+Nach einem Kernel update müssen die entsprechenden Header installiert werden.
+Dazu muss volgender Befehel ausgeführt werden.
+
+```bash
+ sudo apt install dkms cabextract linux-headers-$(uname -r)
+```
+
+Anschließend muss noch neugestartet werden.
+
+``` bash
+sudo reboot now
+```
+
+### xone Kernel Module updaten
+
+Falls das Gamepad nach dem installieren der passenden Linux Header immer noch nicht funktionieren sollte,
+kann noch das *xone* Kernel Module aktualliesiert werden.
+Dauzu müssen folgende Schritte ausgeführt werden:
+
+1. Xbox Gamepad und/oder Wireless Adapter abstecken.
+
+2. Aktuell installierte Version entfernen.
+
+   ```bash
+   cd ~/software/xone
+   sudo ./uninstall.sh
+   ```
+
+3. System Neustarten
+
+   ```bash
+   sudo reboot now
+   ```
+
+4. Repository updaten:
+
+    ```bash
+    cd ~/software && git pull
+    ```
+
+5. `xone` installieren:
+
+    ```bash
+    cd xone
+    sudo ./install.sh --release
+    ```
+
+6. Firmware für den Wireless Adapter herunterladen:
+
+    ```bash
+    sudo xone-get-firmware.sh
+    ```
+
+7. Xbox Wireless Adapter anstecken und Gamepad einschalten.
