@@ -18,14 +18,13 @@ has_children: false
 
 ## Einleitung
 
-Es kann praktisch sein ROS *Nodes* auf mehreren Systemen auszuführen, zum Beispiel um die Bildverarbeitungsalgorythmen nicht auf dem Raspberry auszuführen. Damit die *Nodes* untereinander kommunizieren können, müssen sich alle Systeme in der gleichen ROS *Domain* befinden.
-
-Wenn das Gegenteil gewünscht ist, siehe [ROS Localhost Only]({{site.url}}/ros2/localhost_only.html).
+Es kann praktisch sein ROS *Nodes* auf mehreren Systemen auszuführen, zum Beispiel um die Bildverarbeitungsalgorythmen nicht auf dem Raspberry auszuführen. Damit die *Nodes* untereinander kommunizieren können, müssen sich alle Systeme in der gleichen ROS *Domain* befinden. Ebenfalls muss der *localhost only* Modus deaktiviert sein, siehe hierfür [ROS Localhost Only]({{site.url}}/ros2/localhost_only.html)
 
 ## ROS Domain ID
 
 {: .source}
 <https://docs.ros.org/en/humble/Concepts/Intermediate/About-Domain-ID.html>
+<https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.html#the-ros-domain-id-variable>
 
 Die *Domain ID* kann einmalig oder dauerhaft gesetzt werden.
 

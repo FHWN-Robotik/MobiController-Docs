@@ -20,9 +20,10 @@ has_children: false
 
 Manchmal kann es gewünscht sein die Kommunikation mit anderen Systemen zu deaktivieren. Dies kann mittels des *localhost only* Modus erreicht werden.
 
-Wenn das Gegenteil gewünscht ist, siehe [ROS Domain]({{site.url}}/ros2/domain.html).
-
 ## Localhost Only
+
+{: .source}
+<https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.html#the-ros-localhost-only-variable>
 
 Um die Kommunikation mit anderen Systemen im Netzwerk zu deaktivieren, kann der *localhost only* Modus aktiviert werden.
 
