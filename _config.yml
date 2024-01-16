@@ -2,7 +2,7 @@ title: MobiController Docs
 description: Die Dokumentation für den Mobi
 theme: just-the-docs
 
-url: https://fhwn-robotik.github.io/MobiController-Docs/
+url: https://fhwn-robotik.github.io/MobiController-Docs
 
 # aux_links:
 #   Template Repository: https://github.com/just-the-docs/just-the-docs-template
@@ -24,6 +24,7 @@ callouts:
   note:
     title: Hinweis
     color: blue
+
 
   warning:
     title: Achtung
