@@ -115,10 +115,7 @@ Dazu müssen folgende Schritte ausgeführt werden.
    firewall=true
    ```
 
-3. Anschließend muss noch die *Hyper-V* Firewall so konfiguriert werden, dass eingehende Verbindungen aus dem lokalen Netzwerk erlaubt werden.
-   1. Ein *PowerShell* Fenster als **Administrator** öffnen.
-
-   2. Folgenden Befehl ausführen.
+3. Anschließend muss noch die *Hyper-V* Firewall so konfiguriert werden, dass eingehende Verbindungen aus dem lokalen Netzwerk erlaubt werden. Dafür muss ein *PowerShell* Fenster als **Administrator** geöffnet und folgender Befehl ausgeführt werden.
 
    ```powershell
    New-NetFirewallHyperVRule `
