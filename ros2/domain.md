@@ -20,7 +20,7 @@ has_children: false
 
 Es kann praktisch sein ROS *Nodes* auf mehreren Systemen auszuführen, zum Beispiel um die Bildverarbeitungsalgorythmen nicht auf dem Raspberry auszuführen. Damit die *Nodes* untereinander kommunizieren können, müssen sich alle Systeme in der gleichen ROS *Domain* befinden.
 
-Wenn das Gegenteil gewünscht ist, und der Roboter mit keinen anderen Systemen kommunizieren soll, kann ROS auf *localhost only* gestellt werden.
+Wenn das Gegenteil gewünscht ist, siehe [ROS Localhost Only]({{site.url}}/ros2/localhost_only.html).
 
 ## ROS Domain ID
 
@@ -48,15 +48,3 @@ Dazu die Datei `~/.bashrc` in einem beliebigen Texteditor öffnen und folgende Z
 ```bash
 export ROS_DOMAIN_ID=<ID>
 ```
-
-## Localhost Only
-
-Um die Kommunikation mit anderen Systemen im Netzwerk zu deaktivieren, kann der *localhost only* Modus aktiviert werden.
-
-Der `localhost only` Modus kann dauerhaft aktiviert werden, indem die Datei `~/.bashrc` in einem beliebigen Texteditor geöffnet wird und folgende Zeile am Ende hinzufügt oder bearbeitet wird.
-
-```bash
-export ROS_LOCALHOST_ONLY=1
-```
-
-Um den *localhost only* Modus zu deaktivieren, muss `ROS_LOCALHOST_ONLY` in der obigen Zeile auf `0` gesetzt werden.
