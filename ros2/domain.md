@@ -38,7 +38,7 @@ export ROS_DOMAIN_ID=<ID>
 ```
 
 Die *Domain ID* kann dabei zwischen `0` und `101` liegen. Der Standardwert ist `0`.
-Im Falle der Mobis empfiehlt es sich die letzte Zahl der IP-Adresse als *Domain ID* zu verwenden. Zum Beispiel hat *Delta* die IP-Adresse `xxx.xxx.xxx.59`, daher wäre die *Domain ID* `59` empfohlen.
+Im Falle der Mobis empfiehlt es sich die letzte Zahl der IP-Adresse als *Domain ID* zu verwenden. Zum Beispiel hat *Delta* die IP-Adresse `xxx.xxx.xxx.59`, daher wäre `ROS_DOMAIN_ID=59` empfohlen.
 
 ### Domain ID dauerhaft setzten
 
