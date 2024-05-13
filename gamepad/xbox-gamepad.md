@@ -37,6 +37,9 @@ Ebenfalls muss der Benutzer der passenden Gruppe zugewiesen werden.
 
 ### Voraussetzungen installieren
 
+{: .note}
+Der Befehl `nala` kann durch `apt` ersetzt werden, falls `nala` nicht vorhanden ist.
+
 {: .warning}
 Nach einem Kernel Update müssen die entsprechenden Header manuell nachinstalliert werden.
 Dies wird im Abschnitt [Linux Kernel Header updaten/neu installieren](#linux-header-updatenneu-installieren) erklärt.
@@ -44,7 +47,7 @@ Dies wird im Abschnitt [Linux Kernel Header updaten/neu installieren](#linux-hea
 1. Zuerst müssen die "Prerequisites" installiert werden:
 
     ```bash
-    sudo apt install dkms cabextract linux-headers-$(uname -r)
+    sudo nala install dkms cabextract linux-headers-$(uname -r)
     ```
 
 2. Anschließend muss der Raspberry einmal neu gestartet werden.
@@ -163,12 +166,15 @@ Hier sind verschiedene Möglichkeiten das Gamepad zu testen.
 
 ### Jstest-gtk
 
+{: .note}
+Der Befehl `nala` kann durch `apt` ersetzt werden, falls `nala` nicht vorhanden ist.
+
 Mit jstest-gtk kann die Funktion des Gamepads in Linux getestet werden.
 
 1. jstest-gtk installieren:
 
     ```bash
-    sudo apt install jstest-gtk
+    sudo nala install jstest-gtk
     ```
 
 2. Gamepad anschließen.
@@ -214,11 +220,14 @@ Falls sich der Xbox Controller nicht mehr verbinden lässt können folgende Opti
 
 ### Linux Header updaten/neu installieren
 
+{: .note}
+Der Befehl `nala` kann durch `apt` ersetzt werden, falls `nala` nicht vorhanden ist.
+
 Nach einem Kernel update müssen die entsprechenden Header installiert werden.
 Dazu muss volgender Befehel ausgeführt werden.
 
 ```bash
- sudo apt install dkms cabextract linux-headers-$(uname -r)
+ sudo nala install dkms cabextract linux-headers-$(uname -r)
 ```
 
 Anschließend muss noch neugestartet werden.
