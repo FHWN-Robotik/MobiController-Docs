@@ -18,6 +18,9 @@ grand_parent: Setup
 
 ## Installation
 
+{: .note}
+`xx` ist ein Platzhalter für den Namen oder die letzten beiden Zahlen der IP des Mobis, je nach Kontext.
+
 1. Image [herunterladen](https://fhwiener.sharepoint.com/:u:/s/BACMobi_cloud/EUx3iKcWVMNDpjr2bIcfgwEBm7VD3D7REHhsJGJzlkuGvg?e=ff3PBE).
 2. Flashen des Images auf eine SD-Karte, z. B. mit [balenaEtcher](https://www.balena.io/etcher)
 3. SD-Karte in Raspberry stecken und Raspberry einschalten.
@@ -26,51 +29,72 @@ grand_parent: Setup
    Zuerst muss der Hostname mittels der `hostnamectl` geändert werden.
 
    ```bash
-   sudo hostnamectl hostname NEW_HOSTNAME
+   sudo hostnamectl set-hostname mobi-xx
    ```
 
    Anschließend muss noch in der `/etc/hosts` Datei der Hostname angepasst werden.
    Dazu im Eintrag
 
    ```bash
-   127.0.1.1       mobi-setup
+   127.0.1.1       mobi-template
    ```
 
-   `mobi-setup` mit dem neuen Hostname austauschen.
+   `mobi-template` mit dem neuen Hostname austauschen.
 
    ```bash
-   127.0.1.1       NEW_HOSTNAME
+   127.0.1.1       mobi-xx
    ```
 
-5. DHCP deaktivieren und entsprechende IP-Adresse setzten.
-
-   Hier ist das `xx` mit dem entsprechenden Teil der IP-Adresse zu ersetzten.
+5. Deaktivieren von cloud-init
 
    ```bash
-   sudo nmcli connection modify Robotik\ Labor ipv4.addresses 10.94.160.xx/24
+   sudo sh -c 'echo "network: {config: disabled}" > /etc/cloud/cloud.cfg.d/99-disable-cloud-init.cfg'
    ```
 
-    ```bash
-   sudo nmcli connection modify Robotik\ Labor ipv4.gateway 10.94.160.1
-   ```
+6. In der Datei `/etc/cloud/cloud.cfg` den Wert `preserve_hostname` von `false` auf `true` ändern
 
    ```bash
-   sudo nmcli connection modify Robotik\ Labor ipv4.dns 10.94.32.11,10.30.0.11,10.30.0.12
+   sudo nano /etc/cloud/cloud.cfg
    ```
+
+7. DHCP deaktivieren und entsprechende IP-Adresse setzten.
+
+   Die Datei `/etc/netplan/50-cloud-init.yaml` zu folgendem ändern
 
    ```bash
-   sudo nmcli connection modify Robotik\ Labor ipv4.method manual
+   network:
+    version: 2
+    wifis:
+        renderer: networkd
+        wlan0:
+            access-points:
+                Robotik Labor:
+                    password: <redacted>
+            dhcp4: false
+            addresses:
+              - 10.94.160.xx/24
+            gateway4: 10.94.160.1
+            nameservers:
+              addresses: [10.94.32.11, 10.30.0.11, 10.30.0.12]
+            optional: true
    ```
 
-6. ROS Domain setzte
+8. ROS Domain setzte
 
-   Hierzu in der `~/.bashrc` Datei die folgende Zeile entsprechend anpassen. Mehr Informationen sind [hier]({{site.url}}/ros2/domain.html) zu finden.
+    {: .note}
+    Mehr Informationen sind [hier]({{site.url}}/ros2/domain.html) zu finden.
+
+   Hierzu in der `~/.bashrc` Datei die folgende Zeile entsprechend anpassen.
 
    ```bash
    export ROS_DOMAIN_ID=0
    ```
 
-7. Reboot
+9. Reboot
+
+   ```bash
+   suod reboot
+   ```
 
 ## SSH X-Forwarding
 
@@ -89,10 +113,10 @@ grand_parent: Setup
    - `-C`: Kompression
 
    ```bash
-   ssh -XC mobi@10.94.160.xxx
+   ssh -XC mobi@10.94.160.xx
    ```
 
-## SSH mit Public Key Authentifikation (optional, empfohlen)
+## SSH mit Public Key Authentifikation
 
 {: .note }
 Alle folgenden Befehle lokal ausführen und xx immer mit dem passen Teil der IP des Mobis ersetzen.
