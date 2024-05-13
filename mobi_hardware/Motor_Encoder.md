@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Motor mit Encoder
-parent: Mobi
+parent: Mobi Hardware
 has_children: false
 ---
 

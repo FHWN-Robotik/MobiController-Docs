@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Mobi
+title: Mobi Hardware
 has_children: true
 ---
 
-# Mobi
+# Mobi Hardware
 
 In diesem Bereich werden Besonderheiten der Mobi-Hardware dokumentiert.
