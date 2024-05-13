@@ -36,16 +36,10 @@ grand_parent: Setup
    ```
 
    Anschließend muss noch in der `/etc/hosts` Datei der Hostname angepasst werden.
-   Dazu im Eintrag
 
-   ```bash
-   127.0.1.1       mobi-template
-   ```
-
-   `mobi-template` mit dem neuen Hostname austauschen.
-
-   ```bash
-   127.0.1.1       mobi-xx
+   ```diff
+   - 127.0.1.1       mobi-template
+   + 127.0.1.1       mobi-xx
    ```
 
 2. Deaktivieren von cloud-init
@@ -62,9 +56,9 @@ grand_parent: Setup
 
 4. DHCP deaktivieren und entsprechende IP-Adresse setzten.
 
-   Die Datei `/etc/netplan/50-cloud-init.yaml` zu folgendem ändern
+   Die Datei `/etc/netplan/50-cloud-init.yaml` zu folgendem ändern. Das WLAN Passwort dabei unverändert lassen.
 
-   ```bash
+   ```diff
    network:
     version: 2
     wifis:
@@ -73,12 +67,13 @@ grand_parent: Setup
             access-points:
                 Robotik Labor:
                     password: <redacted>
-            dhcp4: false
-            addresses:
-              - 10.94.160.xx/24
-            gateway4: 10.94.160.1
-            nameservers:
-              addresses: [10.94.32.11, 10.30.0.11, 10.30.0.12]
+   -        dhcp4: true
+   +        dhcp4: false
+   +        addresses:
+   +          - 10.94.160.xx/24
+   +        gateway4: 10.94.160.1
+   +        nameservers:
+   +          addresses: [10.94.32.11, 10.30.0.11, 10.30.0.12]
             optional: true
    ```
 
@@ -122,7 +117,7 @@ grand_parent: Setup
 ## SSH mit Public Key Authentifikation
 
 {: .note }
-Alle folgenden Befehle lokal ausführen und xx immer mit dem passen Teil der IP des Mobis ersetzen.
+Alle folgenden Befehle lokal ausführen.
 
 1. Key Pair generieren
 
@@ -155,8 +150,7 @@ Alle folgenden Befehle lokal ausführen und xx immer mit dem passen Teil der IP 
       Windows:
 
       ```bash
-      type $env:USERPROFILE\.ssh\mobi_ed25519.pub | 
-      ssh mobi@10.94.160.xx "cat >> .ssh/authorized_keys"
+      type $env:USERPROFILE\.ssh\mobi_ed25519.pub | ssh mobi@10.94.160.xx "cat >> .ssh/authorized_keys"
       ```
   
 4. Die Verbindung testen
