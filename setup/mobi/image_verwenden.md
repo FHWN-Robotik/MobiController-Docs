@@ -18,13 +18,16 @@ grand_parent: Setup
 
 ## Installation
 
+1. Image vom Server Herunterladen
+2. Flashen des Images auf eine SD-Karte, z. B. mit [balenaEtcher](https://www.balena.io/etcher)
+3. SD-Karte in Raspberry stecken und Raspberry einschalten.
+
+## Post-Installation
+
 {: .note}
 `xx` ist ein Platzhalter für den Namen oder die letzten beiden Zahlen der IP des Mobis, je nach Kontext.
 
-1. Image [herunterladen](https://fhwiener.sharepoint.com/:u:/s/BACMobi_cloud/EUx3iKcWVMNDpjr2bIcfgwEBm7VD3D7REHhsJGJzlkuGvg?e=ff3PBE).
-2. Flashen des Images auf eine SD-Karte, z. B. mit [balenaEtcher](https://www.balena.io/etcher)
-3. SD-Karte in Raspberry stecken und Raspberry einschalten.
-4. Hostname setzen:
+1. Hostname setzen:
 
    Zuerst muss der Hostname mittels der `hostnamectl` geändert werden.
 
@@ -45,19 +48,19 @@ grand_parent: Setup
    127.0.1.1       mobi-xx
    ```
 
-5. Deaktivieren von cloud-init
+2. Deaktivieren von cloud-init
 
    ```bash
    sudo sh -c 'echo "network: {config: disabled}" > /etc/cloud/cloud.cfg.d/99-disable-cloud-init.cfg'
    ```
 
-6. In der Datei `/etc/cloud/cloud.cfg` den Wert `preserve_hostname` von `false` auf `true` ändern
+3. In der Datei `/etc/cloud/cloud.cfg` den Wert `preserve_hostname` von `false` auf `true` ändern
 
    ```bash
    sudo nano /etc/cloud/cloud.cfg
    ```
 
-7. DHCP deaktivieren und entsprechende IP-Adresse setzten.
+4. DHCP deaktivieren und entsprechende IP-Adresse setzten.
 
    Die Datei `/etc/netplan/50-cloud-init.yaml` zu folgendem ändern
 
@@ -79,7 +82,7 @@ grand_parent: Setup
             optional: true
    ```
 
-8. ROS Domain setzte
+5. ROS Domain setzte
 
     {: .note}
     Mehr Informationen sind [hier]({{site.url}}/ros2/domain.html) zu finden.
@@ -90,7 +93,7 @@ grand_parent: Setup
    export ROS_DOMAIN_ID=0
    ```
 
-9. Reboot
+6. Reboot
 
    ```bash
    suod reboot
