@@ -94,26 +94,6 @@ grand_parent: Setup
    suod reboot
    ```
 
-## SSH X-Forwarding
-
-1. Benötigte Software installieren:
-
-   - Linux: Keine
-   - Mac: [XQuartz](https://www.xquartz.org)
-   - Windows: [Xming](https://www.straightrunning.com/XmingNotes/)
-
-2. Mit SSH verbinden:
-
-   {: .note}
-   Folgender Befehl muss lokal ausgeführt werden.
-
-   - `-X`: X-Forwarding
-   - `-C`: Kompression
-
-   ```bash
-   ssh -XC mobi@10.94.160.xx
-   ```
-
 ## SSH mit Public Key Authentifikation
 
 {: .note }
@@ -166,3 +146,23 @@ Alle folgenden Befehle lokal ausführen.
 ## Remote Development mit VS Code
 
 1. VS Code Extension [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) installieren
+
+## SSH X-Forwarding
+
+1. Benötigte Software installieren:
+
+   - Linux: Keine
+   - Mac: [XQuartz](https://www.xquartz.org)
+   - Windows: [Xming](https://www.straightrunning.com/XmingNotes/)
+
+2. Mit SSH verbinden:
+
+   {: .note}
+   Folgender Befehl muss lokal ausgeführt werden.
+
+   - `-X`: X-Forwarding
+   - `-C`: Kompression
+
+   ```bash
+   ssh -XC mobi@10.94.160.xx
+   ```
