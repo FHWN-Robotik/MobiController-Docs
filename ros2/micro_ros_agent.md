@@ -75,8 +75,8 @@ Der MicroROS Agent ist auf dem Mobi bereits vorinstalliert.
 1. Den Workspace sourcen
 
    ```bash
-   source install/setup.bash
    cd ~/ros2_ws
+   source install/setup.bash
    ```
 
 2. Falls der Agent noch nicht gebuildet ist, diesen builden.
