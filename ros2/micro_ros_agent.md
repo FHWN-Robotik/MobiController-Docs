@@ -42,7 +42,7 @@ Der MicroROS Agent ist auf dem Mobi bereits vorinstalliert.
 3. Den MicoROS agent herunterladen
 
    {: .note}
-   `$ROS_DISRO` ist eine Environment variable welche die ROS version beinhaltet.
+   `$ROS_DISRO` ist eine Environment variable welche die ROS Version beinhaltet.
    Im Fall des Mobis ist diese `humble`
 
    ```bash

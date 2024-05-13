@@ -17,7 +17,7 @@ has_children: false
 ---
 
 ## Einleitung
-Für den Mobi werden Cusotm Messages und Services benötigt.
+Für den Mobi werden Custom Messages und Services benötigt.
 
 ## Installation
 
