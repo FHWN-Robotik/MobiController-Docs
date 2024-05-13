@@ -87,10 +87,17 @@ echo "PYTHONWARNINGS=\"ignore:setup.py install is deprecated::setuptools.command
 export PYTHONWARNINGS" >> ~/.bashrc
 ```
 
-## Sourcen des ROS Setup Files
+## `~/.bashrc` Einstellungen
+
+Folgende Zeilen am Ende der `~/.bashrc` hinzufügen.
 
 ```bash
-echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
+export ROS_LOCALHOST_ONLY=0
+export ROS_DOMAIN_ID=0
+export XRCE_DOMAIN_ID_OVERRIDE=${ROS_DOMAIN_ID} # micro-ros agent domain id override
+export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+
+source /opt/ros/humble/setup.bash
 ```
 
 ```bash
