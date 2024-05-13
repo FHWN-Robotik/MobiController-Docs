@@ -15,5 +15,5 @@ Die Dokumentation ist [hier](https://fhwn-robotik.github.io/MobiController-Docs/
 2. Entwicklungsserver starten
 
     ```bash
-    bundle exec jekyll serve
+    bundle exec jekyll serve --livereload
     ```
