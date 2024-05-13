@@ -150,14 +150,9 @@ Die Installationsanleitung für ROS ist [hier]({{site.url}}/setup/ros.html) zu f
 1. Public Key Authentication aktivieren
    Die Datei `/etc/ssh/sshd_cofig` als `root` öffnen und die Zeile
 
-   ```bash
-   #PubkeyAuthentication yes
-   ```
-
-   zu
-
-   ```bash
-   PubkeyAuthentication yes
+   ```diff
+   - #PubkeyAuthentication yes
+   + PubkeyAuthentication yes
    ```
 
    ändern.
