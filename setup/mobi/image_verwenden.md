@@ -110,7 +110,7 @@ Alle folgenden Befehle lokal ausführen.
    Die lokale Datei ``~/.ssh/config`` öffnen und folgendes hinzufügen
 
    ```bash
-   Host mobi
+   Host mobi-xx
      HostName 10.94.160.xx
      User mobi
      IdentityFile= ~/.ssh/mobi_ed25519
@@ -138,7 +138,7 @@ Alle folgenden Befehle lokal ausführen.
    Nun mit
 
    ```bash
-   ssh mobi
+   ssh mobi-xx
    ```
 
    auf dem Mobi verbinden. Es sollte dabei kein Passwort benötigt werden.
