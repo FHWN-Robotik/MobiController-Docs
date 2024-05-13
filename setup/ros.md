@@ -23,17 +23,20 @@ Für mehr Informationen siehe die [offizielle Dokumentation](https://docs.ros.or
 
 ## Installation
 
+{: .note}
+Der Befehl `nala` kann durch `apt` ersetzt werden, falls `nala` nicht vorhanden ist.
+
 ### Sicherstellen, dass das [Ubuntu Universe repository](https://help.ubuntu.com/community/Repositories/Ubuntu) aktiviert ist
 
 ```bash
-sudo apt install software-properties-common
+sudo nala install software-properties-common
 sudo add-apt-repository universe
 ```
 
 ### Repository hinzufügen
 
 ```bash
-sudo apt update && sudo apt install curl -y
+sudo nala update && sudo nala install curl -y
 ```
 
 ```bash
@@ -48,7 +51,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-a
 Falls hier ein Problem mit dem Key aufgetreten ist, die nächste Zeile ausführen und dann nochmals mit den oberen zwei beginnen und weiter machen.
   
 ```bash
-sudo apt update
+sudo nala update
 ```
 
 ### ROS Installieren
@@ -58,19 +61,19 @@ sudo apt update
   1. Desktop Installation (Empfohlen): ROS, RViz, Demos, Tutorials.
 
       ```bash
-      sudo apt install ros-humble-desktop -y
+      sudo nala install ros-humble-desktop -y
       ```
 
   2. ROS-Base Installation (Bare Bones): Communication Libraries, Message Packages, Command line Tools. Keine GUI Tools.
 
       ```bash
-      sudo apt install ros-humble-ros-base -y
+      sudo nala install ros-humble-ros-base -y
       ```
 
 ### Installieren von ROS Devtools
 
 ```bash
-sudo apt install ros-dev-tools -y
+sudo nala install ros-dev-tools -y
 ```
 
 ### Unterdrücken des Python *setuptool deprecation warning*
