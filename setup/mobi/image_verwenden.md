@@ -62,11 +62,15 @@ grand_parent: Setup
    sudo nmcli connection modify Robotik\ Labor ipv4.method manual
    ```
 
-6. Reboot
+6. ROS Domain setzte
 
-## Remote Access via VNC
+   Hierzu in der `~/.bashrc` Datei die folgende Zeile entsprechend anpassen. Mehr Informationen sind [hier]({{site.url}}/ros2/domain.html) zu finden.
 
-1. VNC Client [hier](https://www.realvnc.com/en/connect/download/viewer/) herunterladen
+   ```bash
+   export ROS_DOMAIN_ID=0
+   ```
+
+7. Reboot
 
 ## SSH X-Forwarding
 
