@@ -15,6 +15,10 @@
 		}
 	},
 
+  "mounts": [
+		"type=bind,source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,readonly",
+	]
+
   // "postStartCommand": "bundle exec jekyll serve"
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
