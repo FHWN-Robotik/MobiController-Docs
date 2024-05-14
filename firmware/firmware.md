@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Firmware
+nav_order: 4
 has_children: true
 ---
 
