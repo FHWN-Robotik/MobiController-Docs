@@ -92,3 +92,6 @@ Der MicroROS Agent ist auf dem Mobi bereits vorinstalliert.
    ```
 
 4. Nachdem der Agent gestartet ist, muss der `RESET` Button des Mobis gedrückt werden.
+
+   {: .note}
+   Ab Version `2.0.1` ist dies nicht mehr notwendig!
