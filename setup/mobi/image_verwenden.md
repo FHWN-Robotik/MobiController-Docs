@@ -166,3 +166,9 @@ Alle folgenden Befehle lokal ausführen.
    ```bash
    ssh -XC mobi@10.94.160.xx
    ```
+
+   Nach Folgen des Abschnittes [SSH mit Public Key Authentifikation](#ssh-mit-public-key-authentifikation) kann auch folgender Befehl verwendet werden:
+
+   ```bash
+   ssh mobi-xx
+   ```
