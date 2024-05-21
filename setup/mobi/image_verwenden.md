@@ -91,7 +91,7 @@ grand_parent: Setup
 6. Reboot
 
    ```bash
-   suod reboot
+   sudo reboot
    ```
 
 ## SSH mit Public Key Authentifikation
