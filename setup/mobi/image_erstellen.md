@@ -139,6 +139,10 @@ Der Firmware Updater ermöglicht ein einfaches Aktualisieren der Firmware des Ha
    pip install -r requirements.txt
    ```
 
+### XBox Gamepad Treiber
+
+Die Installationsanleitung für die XBox Gamepad Treiber ist [hier]({{site.url}}/setup/mobi/xbox-gamepad.html) zu finden.
+
 ### ROS 2 Installieren
 
 Die Installationsanleitung für ROS ist [hier]({{site.url}}/setup/ros.html) zu finden.
