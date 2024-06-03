@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Image Erstellen
-parent: Mobi
+parent: Mobi Image
 grand_parent: Setup
 ---
 
