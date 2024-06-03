@@ -37,6 +37,8 @@ Einige Services und Topics verwenden Custom Types aus den [Mobi Interface]({{sit
 ### /encoders
 [mobi_interfaces/msg/EncodersStamped]({{site.url}}/ros2/mobi_interfaces.html#mobi_interfacesmsgencodersstamped)
 
+Merh infos zu den Encodern sind in der [Mobi Hardware]({{site.url}}/mobi_hardware/Motor_Encoder.html) zu finden.
+
 ### /imu
 [sensor_msgs/msg/Imu](https://docs.ros2.org/latest/api/sensor_msgs/msg/Imu.html)
 
@@ -46,13 +48,19 @@ Einige Services und Topics verwenden Custom Types aus den [Mobi Interface]({{sit
 ### /temperature
 [sensor_msgs/msg/Temperature](https://docs.ros2.org/latest/api/sensor_msgs/msg/Temperature.html)
 
+Die Temeratur ist in `°C`.
+
 ### /ultra_ranges
 [mobi_interfaces/msg/UltraRanges]({{site.url}}/ros2/mobi_interfaces.html#mobi_interfacesmsgultraranges)
+
+Die Entfernung ist in `m`.
 
 ## Subscribers
 
 ### /cmd_vel
 [geometry_msgs/msg/Twist](https://docs.ros2.org/latest/api/geometry_msgs/msg/Twist.html)
+
+Die Einheiten sind `mm/s` und `mrad/s`.
 
 ## Services
 
