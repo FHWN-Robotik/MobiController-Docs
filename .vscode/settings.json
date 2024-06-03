@@ -3,16 +3,18 @@
   "ltex.dictionary": {
     "de-AT": [
       "aktualliesiern",
+      "FreeRTOS",
       "Humble",
       "HYE",
       "MicroROS",
       "Multicast",
       "Package",
       "Packages",
+      "Pozyx",
       "ROS",
       "STM",
       "Updater",
       "WSL"
     ]
-  }
+  },
 }
