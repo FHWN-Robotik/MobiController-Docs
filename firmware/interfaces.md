@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Micro ROS
+title: Interfaces
 parent: Firmware
 ---
 
-# Micro ROS
+# Interfaces
 {: .no_toc }
 
 ## Inhalt
@@ -21,7 +21,7 @@ Für MicroROS muss *Fast DDS* verwendet werden. Mehr dazu [hier](https://github.
 ## Einleitung
 
 Der Mobi stellt verschiedene *Services* zu Verfügung.
-Außerdem published und subscibed er auf mehrere *Topics*.
+Außerdem published und subscribed er auf mehrere *Topics*.
 
 Einige Services und Topics verwenden Custom Types aus den [Mobi Interface]({{site.utl}}/ros2/mobi_interfaces.html).
 
