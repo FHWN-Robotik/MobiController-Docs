@@ -27,7 +27,7 @@ Es kann praktisch sein ROS *Nodes* auf mehreren Systemen auszuführen, zum Beisp
 <https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.html#the-ros-domain-id-variable>
 
 {: .note}
-Für MicroROS ist die Umgebungsvariable `XRCE_DOMAIN_ID_OVERRIDE`.
+Für MicroROS ist die Umgebungsvariable `XRCE_DOMAIN_ID_OVERRIDE` ebenfalls zu setzten.
 
 Die *Domain ID* kann einmalig oder dauerhaft gesetzt werden.
 
