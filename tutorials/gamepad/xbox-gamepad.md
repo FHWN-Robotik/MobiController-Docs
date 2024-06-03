@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Xbox Gamepad
+grand_parent: Tutorials
 parent: Gamepad
 ---
 

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Twist aus Joy Topic
+grand_parent: Tutorials
 parent: Gamepad
 ---
 
