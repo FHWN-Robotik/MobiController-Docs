@@ -21,7 +21,7 @@ parent: Gamepad
 In diesem Dokument wird erklärt wie ein Gamepad in ROS2 verwendet werden kann. Damit der Topic `/joy` mit dem Type `sensor_msgs/Joy`  gepublished werden kann.
 
 {: .note}
-Um einen Xbox Gamepad mit Linux verwenden zu können muss der [Treiber installiert]({{site.url}}/setup/mobi/xbox-gamepad.html) sein.
+Um einen Xbox Gamepad mit Linux verwenden zu können muss der [Treiber installiert]({{site.url}}/setup/xbox-gamepad.html) sein.
 Auf dem Mobi ist dies berreits erledigt.
 
 ## Joy Node starten

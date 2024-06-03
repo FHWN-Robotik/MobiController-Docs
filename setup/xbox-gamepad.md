@@ -1,8 +1,7 @@
 ---
 layout: default
 title: Xbox Gamepad
-grand_parent: Setup
-parent: Mobi
+parent: Setup
 ---
 
 # Xbox Gamepad
