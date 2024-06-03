@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Offline LiDAR SLAM (MATLAB)
+grand_parent: Tutorials
 parent: LiDAR
 ---
 
