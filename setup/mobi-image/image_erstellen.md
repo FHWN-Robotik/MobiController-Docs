@@ -60,9 +60,9 @@ Dieser Abschnitt wird von Studenten in der Regel **nicht** benötigt!
 
 10. Alle nicht benötigten Pakete entfernen
 
-   ```bash
-   sudo apt autoremove
-   ```
+    ```bash
+    sudo apt autoremove
+    ```
 
 ## Software Installieren
 
