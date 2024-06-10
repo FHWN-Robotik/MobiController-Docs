@@ -6,7 +6,7 @@
     {
       "label": "start:dev",
       "type": "shell",
-      "command": "bundle exec jekyll serve",
+      "command": "bundle exec jekyll serve --livereload",
       "presentation": {
         "echo": true,
         "reveal": "never",
