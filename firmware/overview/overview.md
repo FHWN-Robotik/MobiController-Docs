@@ -23,3 +23,8 @@ Wir die meisten `C` Programme, ist auch in der Firmware der Entrypoint die `int 
 Diese befindet sich in der `main.c` Datei.
 Hier werden die Peripheriegeräte und deren Treiber initialisiert und anschließend der FreeRTOS Kernel gestartet.
 Die einzelnen Treiber werden in den Unterkapiteln dieses Abschnittes erläutert.
+
+## Firmware Version
+
+Die version der Firmware ist in `main.h` als mit den define `FIRMWARE_VERSION` definiert.
+Beim Veröffentlichen einer neuen version muss diese angepasst werden bevor ein *Git Tag* erstellt wird.
