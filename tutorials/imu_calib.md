@@ -29,4 +29,4 @@ Der Kalibrierungsstatus kann mit [/imu_get_calib_status]({{site.url}}/firmware/i
 ## Speichern der Kalibrationsdaten
 
 Die Kalibrationsdaten können mit den Services [/imu_get_calib_data]({{site.url}}/firmware/interfaces.html#imu_get_calib_data) und [/imu_set_calib_data]({{site.url}}/firmware/interfaces.html#imu_set_calib_data) abgerufen und wieder gesetzt werden.
-Dies ermöglicht es, die Daten lokal zu abzuspeichern, damit die IMU nicht nach jedem neustart erneut kalibriert werden muss.
+Dies ermöglicht es, die Daten lokal abzuspeichern, damit die IMU nicht nach jedem neustart erneut kalibriert werden muss.
