@@ -68,22 +68,22 @@ Die Einheiten sind `mm/s` und `mrad/s`.
 [std_srvs/srv/Trigger](https://docs.ros2.org/latest/api/std_srvs/srv/Trigger.html)
 
 ### /imu_get_calib_data
-[mobi_interfaces/srv/GetImuCalibData](http://localhost:4000/ros2/mobi_interfaces.html#mobi_interfacessrvgetimucalibdata)
+[mobi_interfaces/srv/GetImuCalibData]({{site.url}}/ros2/mobi_interfaces.html#mobi_interfacessrvgetimucalibdata)
 
 ### /imu_get_calib_status
-[mobi_interfaces/srv/GetCalibStatus](http://localhost:4000/ros2/mobi_interfaces.html#mobi_interfacessrvgetcalibstatus)
+[mobi_interfaces/srv/GetCalibStatus]({{site.url}}/ros2/mobi_interfaces.html#mobi_interfacessrvgetcalibstatus)
 
 ### /imu_set_calib_data
-[mobi_interfaces/srv/SetImuCalibData](http://localhost:4000/ros2/mobi_interfaces.html#mobi_interfacessrvsetimucalibdata)
+[mobi_interfaces/srv/SetImuCalibData]({{site.url}}/ros2/mobi_interfaces.html#mobi_interfacessrvsetimucalibdata)
 
 ### /led_strip_set
-[mobi_interfaces/srv/SetLedStrip](http://localhost:4000/ros2/mobi_interfaces.html#mobi_interfacessrvsetledstrip)
+[mobi_interfaces/srv/SetLedStrip]({{site.url}}/ros2/mobi_interfaces.html#mobi_interfacessrvsetledstrip)
 
 ### /pozyx_get_calib_status
-[mobi_interfaces/srv/GetCalibStatus](http://localhost:4000/ros2/mobi_interfaces.html#mobi_interfacessrvgetcalibstatus)
+[mobi_interfaces/srv/GetCalibStatus]({{site.url}}/ros2/mobi_interfaces.html#mobi_interfacessrvgetcalibstatus)
 
 ### /pozyx_get_info
-[mobi_interfaces/srv/GetPozyxInfo](http://localhost:4000/ros2/mobi_interfaces.html#mobi_interfacessrvgetpozyxinfo)
+[mobi_interfaces/srv/GetPozyxInfo]({{site.url}}/ros2/mobi_interfaces.html#mobi_interfacessrvgetpozyxinfo)
 
 ### /pozyx_set_power
-[mobi_interfaces/srv/SetPower](http://localhost:4000/ros2/mobi_interfaces.html#mobi_interfacessrvsetpower)
+[mobi_interfaces/srv/SetPower]({{site.url}}/ros2/mobi_interfaces.html#mobi_interfacessrvsetpower)
