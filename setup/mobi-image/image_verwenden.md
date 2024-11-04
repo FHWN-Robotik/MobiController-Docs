@@ -77,7 +77,7 @@ grand_parent: Setup
             optional: true
    ```
 
-5. ROS Domain setzte
+5. ROS Domain setzen
 
     {: .note}
     Mehr Informationen sind [hier]({{site.url}}/ros2/domain.html) zu finden.
@@ -97,21 +97,30 @@ grand_parent: Setup
 ## SSH mit Public Key Authentifikation
 
 {: .note }
-Alle folgenden Befehle lokal ausführen.
+Die folgenden Schritte beschreiben den Ablauf unter Windows (z.B. auf den Labor-PCs) und müssen **in der Windows-PowerShell** (nicht im WSL-Terminal!) ausgeführt werden.
 
-1. Key Pair generieren
+1. SSH-Key-Pair generieren (bei der Frage „Enter passphrase“ einfach nur Enter drücken):
 
    ```bash
-   ssh-keygen -f ~/.ssh/mobi_ed25519 -t ed25519
+   mkdir $env:USERPROFILE/.ssh
+   ssh-keygen -f $env:USERPROFILE/.ssh/mobi_ed25519 -t ed25519
    ```
 
-2. SSH config bearbeiten
+2. SSH-Konfiguration bearbeiten
 
-   Die lokale Datei ``~/.ssh/config`` öffnen und folgendes hinzufügen
+   Die Config-Datei in Notepad öffnen:
 
    ```bash
-   Host mobi-xx
-     HostName 10.94.160.xx
+   notepad $env:USERPROFILE/.ssh/config
+   ```
+
+   Falls die Datei noch nicht existiert, kommt eine Rückfrage, ob die Datei erstellt werden soll -> Ja.
+
+   Folgenden Inhalt in die Datei einfügen; dabei `xxxxxxxxx` durch den Namen des Mobis (zB `omega`) ersetzen, und `yyy` durch den entsprechenden Teil der IP-Adresse des Mobi:
+
+   ```
+   Host mobi-xxxxxxxxx
+     HostName 10.94.160.yyy
      User mobi
      IdentityFile= ~/.ssh/mobi_ed25519
      PreferredAuthentications publickey
@@ -119,33 +128,31 @@ Alle folgenden Befehle lokal ausführen.
      ForwardX11 yes
    ```
 
-3. SSH Key auf den Mobi laden
-  
-      MacOS & Linux:
-
-      ```bash
-      ssh-copy-id -i ~/.ssh/mobi_ed25519.pub mobi@10.94.160.xx
-      ```
-
-      Windows:
-
-      ```bash
-      type $env:USERPROFILE\.ssh\mobi_ed25519.pub | ssh mobi@10.94.160.xx "cat >> .ssh/authorized_keys"
-      ```
-  
-4. Die Verbindung testen
-
-   Nun mit
+4. SSH-Key auf den Mobi kopieren (auch hier `yyy` durch den entsprechenden Teil der IP-Adresse des Mobi ersetzen):
 
    ```bash
-   ssh mobi-xx
+   type $env:USERPROFILE/.ssh/mobi_ed25519.pub | ssh mobi@10.94.160.yyy "cat >> .ssh/authorized_keys"
    ```
 
-   auf dem Mobi verbinden. Es sollte dabei kein Passwort benötigt werden.
+5. Die Verbindung testen
+
+   ```bash
+   ssh mobi-xxxxxxxxx
+   ```
+
+   Bei der ersten Verbindung kommt u.U. eine Nachfrage, ob dem Computer vertraut werden soll -> yes.
+
 
 ## Remote Development mit VS Code
 
 1. VS Code Extension [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) installieren
+2. Befehl ausführen (<kbd>F1</kbd>): `Remote-SSH: Connect to Host…` und `mobi-xxxxxxxxx` auswählen
+3. „Open Folder“ anklicken und `/home/mobi` auswählen.
+
+Die Sidebar auf der linken Seite zeigt jetzt den Inhalt des Homedirectories auf dem Raspi an. Dateien können von dort direkt geöffnet, bearbeitet, gespeichert etc. werden.
+
+Über den Befehl `Terminal: Create new Terminal` kann ein Terminalfenster geöffnet werden, dessen Shell ebenfalls direkt auf dem Raspi läuft (die SSH-Verbindung muss also nicht manuell aufgebaut werden).
+
 
 ## SSH X-Forwarding
 
