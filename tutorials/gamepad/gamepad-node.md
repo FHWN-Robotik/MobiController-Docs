@@ -3,6 +3,7 @@ layout: default
 title: Gamepad Node
 grand_parent: Tutorials
 parent: Gamepad
+nav_order: 2
 ---
 
 # Gamepad Node

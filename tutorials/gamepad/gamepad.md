@@ -3,6 +3,7 @@ layout: default
 title: Gamepad
 has_children: true
 parent: Tutorials
+nav_order: 4
 ---
 
 # Gamepad

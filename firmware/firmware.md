@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Firmware
+title: Mobi Firmware
 nav_order: 3
 has_children: true
 ---

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Firmware Update
-parent: Firmware
+parent: Mobi Firmware
 ---
 
 # Firmware Update

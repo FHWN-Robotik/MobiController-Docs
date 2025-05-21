@@ -2,6 +2,7 @@
 layout: default
 title: IMU Calibration
 parent: Tutorials
+nav_order: 2
 has_children: false
 ---
 

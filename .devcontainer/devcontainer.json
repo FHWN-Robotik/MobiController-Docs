@@ -16,8 +16,11 @@
 	},
 
   "mounts": [
-		"type=bind,source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,readonly",
-	]
+  "type=bind,source=${localEnv:USERPROFILE}/.ssh,target=/home/vscode/.ssh,readonly"
+],
+  "forwardPorts": [4000, 35729],
+  "postStartCommand": "bundle exec jekyll serve --livereload --host 0.0.0.0"
+
 
   // "postStartCommand": "bundle exec jekyll serve"
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Interfaces
-parent: Firmware
+parent: Mobi Firmware
 ---
 
 # Interfaces

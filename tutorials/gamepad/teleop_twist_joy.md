@@ -3,6 +3,7 @@ layout: default
 title: Twist aus Joy Topic
 grand_parent: Tutorials
 parent: Gamepad
+nav_order: 3
 ---
 
 # Twist aus Joy Topic

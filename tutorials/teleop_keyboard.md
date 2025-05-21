@@ -2,6 +2,7 @@
 layout: default
 title: Teleop Keyboard
 parent: Tutorials
+nav_order: 1
 has_children: false
 ---
 
