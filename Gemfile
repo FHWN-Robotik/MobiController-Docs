@@ -8,7 +8,9 @@ gem "just-the-docs" # pinned to the current release
 
 gem "kramdown", "~> 2.4"
 
-#gem "csv"
-#gem "logger"
-#gem "base64"
+
+gem "github-pages", group: :jekyll_plugins
+gem "csv"
+gem "logger"
+gem "base64"
 
