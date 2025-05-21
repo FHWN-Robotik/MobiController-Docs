@@ -8,7 +8,7 @@ gem "just-the-docs" # pinned to the current release
 
 gem "kramdown", "~> 2.4"
 
-gem "csv"
-gem "logger"
-gem "base64"
+#gem "csv"
+#gem "logger"
+#gem "base64"
 
