@@ -97,24 +97,19 @@ grand_parent: Setup
 ## SSH mit Public Key Authentifikation
 
 {: .note }
-Die folgenden Schritte beschreiben den Ablauf unter Windows (z.B. auf den Labor-PCs) und müssen **in der Windows-PowerShell** (nicht im WSL-Terminal!) ausgeführt werden.
+Die folgenden Schritte werden auf den Labor-PCs ausgeführt (nicht auf dem Raspi).
 
-1. SSH-Key-Pair generieren (bei der Frage „Enter passphrase“ einfach nur Enter drücken):
-
-   ```bash
-   mkdir $env:USERPROFILE/.ssh
-   ssh-keygen -f $env:USERPROFILE/.ssh/mobi_ed25519 -t ed25519
-   ```
-
-2. SSH-Konfiguration bearbeiten
-
-   Die Config-Datei in Notepad öffnen:
+1. **SSH-Key-Pair generieren** (bei „Enter passphrase:“ einfach Enter drücken, keine Passphrase eingeben):
 
    ```bash
-   notepad $env:USERPROFILE/.ssh/config
+   ssh-keygen -t ed25519 -f ~/.ssh/id_mobi
    ```
 
-   Falls die Datei noch nicht existiert, kommt eine Rückfrage, ob die Datei erstellt werden soll -> Ja.
+2. **SSH-Konfiguration anpassen**
+
+   ```bash
+   nano ~/.ssh/config
+   ```
 
    Folgenden Inhalt in die Datei einfügen; dabei `xxxxxxxxx` durch den Namen des Mobis (zB `omega`) ersetzen, und `yyy` durch den entsprechenden Teil der IP-Adresse des Mobi:
 
@@ -122,25 +117,43 @@ Die folgenden Schritte beschreiben den Ablauf unter Windows (z.B. auf den Labor-
    Host mobi-xxxxxxxxx
      HostName 10.94.160.yyy
      User mobi
-     IdentityFile= ~/.ssh/mobi_ed25519
-     PreferredAuthentications publickey
-     Compression yes
-     ForwardX11 yes
+     IdentityFile ~/.ssh/id_mobi
    ```
 
-4. SSH-Key auf den Mobi kopieren (auch hier `yyy` durch den entsprechenden Teil der IP-Adresse des Mobi ersetzen):
+3. **Verbindung (mit Passwort) testen:**
 
    ```bash
-   type $env:USERPROFILE/.ssh/mobi_ed25519.pub | ssh mobi@10.94.160.yyy "cat >> .ssh/authorized_keys"
+   ssh mobi-xxxxxxxx
    ```
 
-5. Die Verbindung testen
+   Beim ersten Verbinden erscheint eine Warnung:
+
+   ```
+   The authenticity of host … can't be established.
+   …
+   Are you sure you want to continue connecting (yes/no/[fingerprint])?
+   ```
+
+   Diese Warnung mit Enter bestätigen, anschließend das Passwort eingeben. Danach sollte die Willkommensmeldung des Mobi angezeigt werden.
+
+   Mit `exit` die Verbindung wieder beenden.
+
+
+4. **SSH-Key auf den Mobi kopieren:**
+
+   ```bash
+   ssh-copy-id -i ~/.ssh/id_mobi mobi-xxxxxxxx
+   ```
+
+   (Auch hier `xxxxxxxx` durch Namen des Mobi ersetzen.)
+
+5. **Verbindung ohne Passwort testen:**
 
    ```bash
    ssh mobi-xxxxxxxxx
    ```
 
-   Bei der ersten Verbindung kommt u.U. eine Nachfrage, ob dem Computer vertraut werden soll -> yes.
+   Die Willkommensmeldung sollte erscheinen, ohne dass ein Passwort eingegeben werden muss.
 
 
 ## Remote Development mit VS Code
