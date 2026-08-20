@@ -1,3 +1,21 @@
+---
+layout: default
+title: lamtec LiDAR A2M8
+grand_parent: Tutorials
+parent: LiDAR
+---
+
+# lamtec LiDAR A2M8
+{: .no_toc }
+
+## Inhalt
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
+
 # Slamtec LiDAR A2M8
 > [!NOTE]
 > Wird nur auf dem Mobi benötigt.
