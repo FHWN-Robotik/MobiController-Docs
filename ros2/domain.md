@@ -1,11 +1,11 @@
 ---
 layout: default
-title: ROS Domain
+title: ROS Domain - alt
 parent: ROS2
 has_children: false
 ---
 
-# ROS Domain
+# ROS Domain - alt
 {: .no_toc }
 
 ## Inhalt
