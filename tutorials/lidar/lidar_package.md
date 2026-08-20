@@ -1,11 +1,11 @@
 ---
 layout: default
-title: lamtec LiDAR A2M8
+title: Slamtec LiDAR A2M8
 grand_parent: Tutorials
 parent: LiDAR
 ---
 
-# lamtec LiDAR A2M8
+# Slamtec LiDAR A2M8
 {: .no_toc }
 
 ## Inhalt
