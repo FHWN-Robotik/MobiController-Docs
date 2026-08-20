@@ -1,9 +1,8 @@
 ---
 layout: default
 title: ROS Domain - neu
-grand_parent: Tutorials
-parent: ROS 2
-nav_order: 1
+parent: ROS2
+has_children: false
 ---
 
 # ROS 2 Netzwerk / Discovery
