@@ -17,8 +17,9 @@ parent: LiDAR
 ---
 
 # Slamtec LiDAR A2M8
-> [!NOTE]
-> Wird nur auf dem Mobi benötigt.
+
+{: .note }
+**Hinweis:** Wird nur auf dem Mobi benötigt.
 
 ## Repository herunterladen
 
